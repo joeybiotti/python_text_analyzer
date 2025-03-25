@@ -20,12 +20,3 @@ def analyze_text(text):
         'unique_words': unique_words,
         'word_frequency': word_frequency
     }
-
-sample_text=read_text_file('./texts/great_gatsby.txt') 
-result=analyze_text(sample_text)
-
-print(f"Total words: {result['word_count']}")
-print(f"Total sentences: {result['sentence_count']}")
-print(f"Unique words: {result['unique_words']}")
-print(f"Most common words: {result['word_frequency']}")
-
