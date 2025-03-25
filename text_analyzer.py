@@ -12,14 +12,20 @@ def analyze_text(text):
     word_count=len(words)
     sentence_count=len([s for s in sentences if s.strip()])
     unique_words=len(set(words))
-    word_frequency=Counter(words).most_common(5)
+    word_frequency=Counter(words).most_common()
     
-    print(f"Total words: {word_count}")
-    print(f"Total sentences: {sentence_count}")
-    print(f"Unique words: {unique_words}")
-    print("Most common words:")
-    for word in word_frequency:
-        print(f"{word[0]}: {word[1]}")
-    
+    return {
+        'word_count': word_count,
+        'sentence_count': sentence_count,
+        'unique_words': unique_words,
+        'word_frequency': word_frequency
+    }
+
 sample_text=read_text_file('./texts/great_gatsby.txt') 
-analyze_text(sample_text)  
+result=analyze_text(sample_text)
+
+print(f"Total words: {result['word_count']}")
+print(f"Total sentences: {result['sentence_count']}")
+print(f"Unique words: {result['unique_words']}")
+print(f"Most common words: {result['word_frequency']}")
+
