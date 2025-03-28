@@ -24,6 +24,11 @@ def main():
     print("\nMost Common Words:")
     for word, freq in result['word_frequency'][:10]:  # Limit to top 10 words
         print(f"{word}: {freq}")
+        
+    # Reading Time Estimation
+    avg_reading_speed= 200
+    reading_time_minutes = result['word_count'] / avg_reading_speed
+    print(f"\nEstimated Reading Time: {reading_time_minutes:.2f} minutes")
      
     # Readability analysis   
     try:
