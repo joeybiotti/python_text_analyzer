@@ -1,7 +1,7 @@
 import re 
 from collections import Counter 
 import os 
-from pdminer.high_level import extraxct_text as extract_pdf_text
+from pdfminer.high_level import extract_text as extract_pdf_text
 from docx import Document 
 from bs4 import BeautifulSoup
 
