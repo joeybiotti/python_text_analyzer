@@ -1,7 +1,12 @@
-numpy
-pandas
+jupyterlab
+ipykernel
+scipy
+joblib
+tqdm
+textblob
 nltk
+numpy
 scikit-learn
-matplotlib
-seaborn
-jupyter
+pdfminer.six
+python-docx
+beautifulsoup4
