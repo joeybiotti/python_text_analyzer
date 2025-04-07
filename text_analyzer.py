@@ -24,8 +24,8 @@ def read_text_file(file_path):
         raise ValueError("Unsupported file type. Please provide a .txt, .pdf, .docx, or .html file.")
 
 def analyze_text(text):
-    words=re.findall(r'\b\w+\b', text.lower())  
-    sentences=re.split(r'[.!?]+', text)  
+    words=re.findall(r'\b[a-zA-Z]+\b', text.lower())  
+    sentences=re.split(r'[.!?]+', text) if text.strip() else []
     
     word_count=len(words)
     sentence_count=len([s for s in sentences if s.strip()])
