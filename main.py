@@ -3,8 +3,22 @@ from readability import analyze_reading_level
 
 def main():
     print('Welcome to the Text Analyzer!')
-    file_path = input('Please enter the path to the file you want to analyze: ')
-    
+    print("Please choose an option:")
+    print("1. Analyze 'The Great Gatsby'")
+    print("2. Analyze 'A Farewell to Arms'")
+    print("3. Enter the path to your own file")
+    choice = input("Enter 1, 2, or 3: ")
+
+    if choice == "1":
+        file_path = "./texts/great_gatsby.txt"  # Path to the predefined file
+    elif choice == "2":
+        file_path = "./texts/farewell_to_arms.txt"  # Path to the predefined file
+    elif choice == "3":
+        file_path = input("Please enter the path to the file you want to analyze: ")
+    else:
+        print("Invalid choice. Please restart the program and enter 1, 2, or 3.")
+        return
+
     try: 
         sample_text = read_text_file(file_path)
     except FileNotFoundError:
