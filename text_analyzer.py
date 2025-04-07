@@ -31,10 +31,17 @@ def analyze_text(text):
     sentence_count=len([s for s in sentences if s.strip()])
     unique_words=len(set(words))
     word_frequency=Counter(words).most_common()
+    character_count = len(text)
+    longest_word = max(words, key=len)
+    shortest_word = min(words, key=len)
+
     
     return {
         'word_count': word_count,
         'sentence_count': sentence_count,
         'unique_words': unique_words,
-        'word_frequency': word_frequency
+        'word_frequency': word_frequency,
+        'character_count': character_count,
+        'longest_word': longest_word,
+        'shortest_word': shortest_word
     }
