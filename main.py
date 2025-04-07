@@ -27,6 +27,9 @@ def main():
     print("\nMost Common Words:")
     for word, freq in result['word_frequency'][:10]:  # Limit to top 10 words
         print(f"{word}: {freq}")
+    print(f"Character Count: {result['character_count']}")
+    print(f"Longest Word: {result['longest_word']}")
+    print(f"Shortest Word: {result['shortest_word']}")
     
     # Reading Time Estimation
     average_reading_speed = 200  # Average reading speed in words per minute
